@@ -1,0 +1,35 @@
+﻿<Window x:Class="SeoulStay_V2._0.CreateAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeoulStay_V2._0"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Seoul Stay - CreateAccount" Height="450" Width="800">
+
+    <Grid x:Name="viewTermsConditions">
+        <Label Content="Your information" HorizontalAlignment="Left" Margin="73,29,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Username: " HorizontalAlignment="Left" Margin="68,74,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Full Name:" HorizontalAlignment="Left" Margin="68,128,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Password: " HorizontalAlignment="Left" Margin="68,239,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="usernameField" HorizontalAlignment="Left" Margin="160,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" FontSize="16"/>
+        <TextBox x:Name="nameField" HorizontalAlignment="Left" Margin="160,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" FontSize="16"/>
+        <PasswordBox x:Name="passwordPass" HorizontalAlignment="Left" Margin="164,243,0,0" VerticalAlignment="Top" Width="161" FontSize="16"/>
+        <CheckBox x:Name="iagreeCheck" Content="I agree to the Terns and Conditions" HorizontalAlignment="Left" Margin="68,297,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="loginBtn" Content="Register or Login" HorizontalAlignment="Left" Margin="399,350,0,0" VerticalAlignment="Top" FontSize="18" Width="169" Foreground="White" Background="#FF18B931" Click="loginBtn_Click"/>
+        <Button x:Name="exitBtn" Content="Return login form" HorizontalAlignment="Left" Margin="597,350,0,0" VerticalAlignment="Top" FontSize="18" Width="154" Foreground="White" Background="#FFC12121" Click="exitBtn_Click" />
+        <Button x:Name="viewTerms" Content="View Terms and Conditions" HorizontalAlignment="Left" Margin="440,293,0,0" VerticalAlignment="Top" FontSize="18" Width="235" Foreground="#FF0A53CA" Background="White" BorderBrush="White" Click="viewTerms_Click"/>
+        <Label Content="Retype Password: " HorizontalAlignment="Left" Margin="378,239,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <PasswordBox x:Name="passwordPass_Copy" HorizontalAlignment="Left" Margin="544,243,0,0" VerticalAlignment="Top" Width="160" FontSize="16"/>
+        <DatePicker x:Name="birthdayDate" HorizontalAlignment="Left" Margin="164,185,0,0" VerticalAlignment="Top" Width="161" IsTodayHighlighted="True" SelectedDateFormat="Short" FontSize="16" DisplayDate="2000-01-01"/>
+        <Label Content="Birhtday: " HorizontalAlignment="Left" Margin="68,178,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+        <RadioButton x:Name="maleRadiBtn" Content="Male" HorizontalAlignment="Left" Margin="423,85,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <RadioButton x:Name="femaleRadioBtn" Content="Female" HorizontalAlignment="Left" Margin="516,83,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Number of family members: " HorizontalAlignment="Left" Margin="378,133,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="fmNumber" HorizontalAlignment="Left" Margin="597,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="16"/>
+
+
+    </Grid>
+</Window>
