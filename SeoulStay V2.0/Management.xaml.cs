@@ -44,6 +44,8 @@ namespace SeoulStay_V2._0
             dataGridTraveller.ItemsSource = _allItems;
             ownerDataGrid.ItemsSource = _allItems2;
             UpdateItemCountText(dataGridTraveller.Items.Count);
+            
+            
         }
 
        

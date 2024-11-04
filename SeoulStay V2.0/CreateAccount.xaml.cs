@@ -65,7 +65,7 @@ namespace SeoulStay_V2._0
 
             else if (passwordPass.Password != passwordPass_Copy.Password)
             {
-
+                
             } else 
             {
                 try

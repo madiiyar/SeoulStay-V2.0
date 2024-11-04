@@ -107,7 +107,7 @@ namespace SeoulStay_V2._0
                     IsSelected = false 
                 }).ToList();
 
-                if (_isEditMode)
+                if (_isEditMode && _itemToEdit != null)
                 {
                     var selectedAmenityIds = context.ItemAmenities.
                         Where(a => a.ItemID == _itemToEdit.ID).
@@ -117,7 +117,7 @@ namespace SeoulStay_V2._0
                     {
                         if(selectedAmenityIds.Contains(amenity.ID))
                         {
-                            amenity.IsSelected = true;
+                            amenity.IsSelected = true;  
                         }
                     }
                 }
@@ -252,9 +252,9 @@ namespace SeoulStay_V2._0
                     {
                         Title = titleField.Text,
                         Capacity = int.Parse(capacityField.Text),
-                        NumberOfBathrooms = int.Parse(capacityField.Text),
-                        NumberOfBedrooms = int.Parse(capacityField.Text),
-                        NumberOfBeds = int.Parse(capacityField.Text),
+                        NumberOfBathrooms = int.Parse(bathroomNumField.Text),
+                        NumberOfBedrooms = int.Parse(bedroomNumField.Text),
+                        NumberOfBeds = int.Parse(bedNumField.Text),
                         ApproximateAddress = appAddressField.Text,
                         ExactAddress = exactAddressField.Text,
                         Description = descriptionField.Text,
@@ -264,7 +264,7 @@ namespace SeoulStay_V2._0
                         ItemTypeID = (long)typeComboBox.SelectedValue,
                         AreaID = (long)areaComboBox.SelectedValue,
                         UserID = Properties.Settings.Default.UserID,
-                        GUID = new Guid()
+                        GUID = Guid.NewGuid()
                     };
 
                     context.Items.Add(newItem);
@@ -283,9 +283,11 @@ namespace SeoulStay_V2._0
                         });
 
 
-                        context.SaveChanges();
-                        MessageBox.Show("Added successfully");
+                        
                     }
+
+                    context.SaveChanges();
+                    MessageBox.Show("Added successfully");
                 }
             }
 
